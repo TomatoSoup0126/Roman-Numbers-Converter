@@ -23,16 +23,16 @@ const input = document.getElementById('input')
 const number = document.getElementById('showNumber')
 const rome = document.getElementById('showRome')
 
-let showNumber = randomNumRange(1, 4000)
+let showNumber = randomNumRange(1, 3999)
 let showRome = toRoman(showNumber)
 
 number.innerText = showNumber
 rome.innerText = showRome
 
 convertBtn.addEventListener('click', function (event) {
-  if (input.value < 1 || input.value > 4000 || !isNumber(input.value)) {
+  if (input.value < 1 || input.value > 3999 || !isNumber(input.value)) {
     console.log(input.value < 1)
-    console.log(input.value > 4000)
+    console.log(input.value > 3999)
     console.log(!isNumber(input.value))
     input.value = ''
     alert('Input error!')
@@ -45,7 +45,7 @@ convertBtn.addEventListener('click', function (event) {
 
 
 function toRoman(num) {
-  if (num > 4000) {
+  if (num > 3999) {
     console.log('超出範圍！')
   } else {
     num = Math.floor(num)
